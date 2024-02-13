@@ -8,7 +8,7 @@ def buscar_por_id(id):
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='root',
+            password='MALUGUCK57',
             database='clinica_dental'
         )
 
@@ -57,7 +57,7 @@ def prog():
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='root',
+            password='MALUGUCK57',
             database='clinica_dental'
         )
 
@@ -70,8 +70,8 @@ def prog():
     except Error as e:
         print("Error al conectar a MySQL", e)
         return "Error al conectar a MySQL: " + str(e)
-    finally:
+    '''finally:
         if connection.is_connected():
             cursor.close()
             connection.close()
-            print("Conexión a MySQL cerrada.")
+            print("Conexión a MySQL cerrada.")'''

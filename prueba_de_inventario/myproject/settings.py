@@ -76,11 +76,14 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'clinica_dental',
+        'USER': 'root',
+        'PASSWORD': 'MALUGUCK57',
+        'HOST': 'localhost',  # Usa '127.0.0.1' si 'localhost' no funciona
+        'PORT': '3306',  # El puerto estándar de MySQL es el 3306
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
