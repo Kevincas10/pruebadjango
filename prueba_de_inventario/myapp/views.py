@@ -8,7 +8,7 @@ def buscar_por_id(id):
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='MALUGUCK57',
+            password='root',
             database='clinica_dental'
         )
 
@@ -37,6 +37,9 @@ def index(request):
     resultados = prog()
     return render(request, 'index.html', {'resultados': resultados})
 
+def detalle(request):
+    return render(request, "detalle.html")
+
 def buscar(request):
     id = request.GET.get('id')
 
@@ -54,7 +57,7 @@ def prog():
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='MALUGUCK57',
+            password='root',
             database='clinica_dental'
         )
 
