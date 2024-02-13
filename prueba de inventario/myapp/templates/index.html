@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Materiales</title>
+</head>
+<body>
+    <h1>Lista de Materiales</h1>
+    {% if resultados %}
+    <ul>
+        {% for resultado in resultados %}
+        <li><a href="{% url 'buscar' %}?id={{ resultado.0 }}">{{ resultado.1 }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No hay resultados</p>
+    {% endif %}
+</body>
+</html>
